@@ -9,7 +9,7 @@ bot = telebot.TeleBot(TOKEN)
 def start(message):
 
 #кнопка рестарта
-    markupStart = types.ReplyKeyboardMarkup()
+    markupStart = types.ReplyKeyboardMarkup(resize_keyboard=True)
     btnStart = types.KeyboardButton('/start')
     markupStart.add(btnStart)
     bot.send_message(message.chat.id, 'Добро пожаловать в StudentSearcher!', reply_markup=markupStart)
